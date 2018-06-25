@@ -1,0 +1,90 @@
+
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+
+#listRules{
+  list-style: upper-roman;
+}
+#myCanvas{
+  position: absolute;
+    left: -50%;
+
+}
+#welcomePerson{
+  margin-left: 25px;
+}
+#wrapper{
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+
+}
+#modulo2 {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+#tableWrapper{
+    display: none;
+
+}
+
+#controlsGame{
+    display: none;
+}
+
+#ranking{
+
+    background-color: aqua
+}
+
+#rankingWrapper{
+    display: none;
+}
+
+#table{
+  background-image: url(../resources/radar.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30px,100px;
+  height: 500px;
+  width: 800px;
+  text-align: center;
+  border-color: white;
+}
+
+table tr td:last-child {
+    width: 8.80%;
+}
+
+table tr td:first-child {
+    background-color: aquamarine;
+}
+
+.flip {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	transform: rotateY(360deg);
+}
+.hitShip{
+  background-image: url(../resources/titanic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hitWater{
+  background-image: url(../resources/image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 5px ;
+}
+
+.coord{
+      cursor: url(../resources/crosshair1.png) 16 16,pointer;
+}
