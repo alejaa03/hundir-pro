@@ -58,6 +58,7 @@
 
 table tr td {
 	width: 8.80%;
+  color: green;
 }
 
 table tr td:first-child {
