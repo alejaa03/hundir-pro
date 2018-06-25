@@ -56,8 +56,8 @@
   border-color: white;
 }
 
-table tr td:last-child {
-    width: 8.80%;
+table tr td {
+	width: 8.80%;
 }
 
 table tr td:first-child {
