@@ -6,6 +6,17 @@ html {
   font-family: 'Roboto Mono', monospace;
 }
 
+button{
+  background-color: black;
+  color: lime;
+}
+input{
+  background-color: black;
+  border: solid;
+  border-color: lime;
+  color: lime;
+}
+
 #listRules{
   list-style: upper-roman;
 }

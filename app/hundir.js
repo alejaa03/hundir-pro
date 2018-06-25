@@ -141,7 +141,7 @@ function endGame() {
     document.getElementById('tableWrapper').style.display = 'none';
     document.getElementById('controlsGame').style.display = 'none';
     document.getElementById('modulo2').style.display = 'none';
-    if (shipReg.length == 0) {
+    if (hasGameEnded()) {
         document.getElementById('endMsg').innerHTML = "YOU ELIMINATED ALL THREATS USING " + missileCount + " MISSILES!"
     }
     else {
