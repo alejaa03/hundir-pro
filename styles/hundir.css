@@ -100,6 +100,16 @@ table tr td:first-child {
   background-position-x: center;
   background-position-y: -5px;
 }
+
+  @keyframes shipHere {
+  from { background-color: inherit; }
+  to { background-color: lime; }
+}
+
+.shipHere{
+  animation: shipHere 1s infinite;
+}
+
 .coord{
       cursor: url(../resources/crosshair1.png) 16 16,pointer;
 }

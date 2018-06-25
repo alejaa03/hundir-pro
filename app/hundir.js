@@ -3,7 +3,7 @@ askNameBtn.addEventListener('click', function(){
   userName()
   startGame()
 });
-//startBtn.addEventListener('click', startGame);
+solutionBtn.addEventListener('click', showSolution);
 endGameBtn.addEventListener('click', endGame)
 playAgainBtn.addEventListener('click', playAgain)
 //document.getElementsByClassName('coord').addEventListener("click",flip)
@@ -38,6 +38,7 @@ function userName() {
 var clickFunction = function (e){
   document.getElementById(this.id).classList.add("flip");
   document.getElementById(this.id).classList.remove("coord");
+  document.getElementById(this.id).classList.remove("shipHere");
   //document.getElementById(this.id).classList.remove("coord");
     var tempID = this.id;
    setTimeout(function(){
@@ -116,6 +117,18 @@ function startGame() {
 }
 
 
+function showSolution(){
+      for (var l = 0; l < document.getElementsByClassName('coord').length; l++) {
+        var tempPos = document.getElementsByClassName('coord')[l].id.split(",")
+        for (var i = 1; i < shipReg.length; i++) {
+          for (var j = 0; j < shipReg[i].length; j++) {
+            if(tempPos[0] == shipReg[i][j][0] && tempPos[1] == shipReg[i][j][1]){
+              document.getElementsByClassName("coord")[l].classList.add("shipHere")
+          }
+        }
+      }
+    }
+  }
 
 
 
