@@ -13,10 +13,11 @@
 <body>
 
     <div id="wrapper">
-        <h1 id="frontTitle">Bienvenido a Hundir la Flota</h1>
+
         <!-- MODULO 1 -->
         <div id="introGame">
-            <input type="text" placeholder="UserName" id="inputName" />
+            <h1>Bienvenido a Hundir la Flota</h1>
+            <input type="text" placeholder="ENTER NAME" id="inputName" />
             <button id="askNameBtn">New Game</button>
         </div>
 
@@ -34,10 +35,10 @@
                       <li>Si quieres volver a jugar haz click en New Game</li>
                       <li>Hay distintos tipos de barcos
                           <ul>
-                            <li>1 Portaaviones que ocupa 4 casillas: <img id="portaavionesImg" src="resources/Portaaviones.png" alt="portaaviones" width="50" height="50"></li>
-                            <li>2 Galeones que ocupan 3 casillas: <img id="galeonImg" src="resources/Galeon.jpg" alt="galeon" width="50" height="50"> </li>
-                            <li>3 Veleros que ocupan 2 casillas: <img id="veleroImg" src="resources/Velero.png" alt="velero" width="50" height="50"></li>
-                            <li>4 Colchonetas que ocupan 1 casilla: <img id="colchonetaImg" src="resources/colchoneta.png" alt="colchoneta" width="50" height="50"></li>
+                            <li>1 Portaaviones que ocupa 4 casillas: <img id="portaavionesImg" src="resources/PortaavionesGreen.png" alt="portaaviones" width="50" height="50"></li>
+                            <li>2 Galeones que ocupan 3 casillas: <img id="galeonImg" src="resources/GaleonGreen.png" alt="galeon" width="50" height="50"> </li>
+                            <li>3 Veleros que ocupan 2 casillas: <img id="veleroImg" src="resources/VeleroGreen.png" alt="velero" width="50" height="50"></li>
+                            <li>4 Colchonetas que ocupan 1 casilla: <img id="colchonetaImg" src="resources/ColchonetaGreen.png" alt="colchoneta" width="50" height="50"></li>
 
                           </ul>
                       </li>
@@ -48,9 +49,9 @@
 
         <div id="tableWrapper">
           <canvas id="myCanvas" width="300" height="400"></canvas>
-          <table id="table" border=1 cellspacing=0 cellpadding=0 style="background-color: black;">
-              <tr style="background-color: brown">
-                  <td style="background-color:  white;"></td>
+          <table id="table" border=0 cellspacing=0 cellpadding=0 style="background-color: black;">
+              <tr style="background-color: black">
+                  <td></td>
                   <td>1</td>
                   <td>2</td>
                   <td>3</td>
@@ -197,7 +198,6 @@
 
         </div>
         <div id="controlsGame">
-            <button id="test" onclick="flip()">FLIP</button>
             <button id="endGameBtn">End Game</button>
             <button id="solutionBtn">Solution</button>
         </div>
@@ -206,11 +206,8 @@
 
         <!-- MODULO 4 -->
 
-        <div id="rankingWrapper">
-            <h1 id="textRanking">Ranking</h1>
-            <div id="ranking">
-
-            </div>
+        <div id="endMsgContainer">
+            <h1 id="endMsg"></h1>
             <button id="playAgainBtn">Play Again</button>
         </div>
     </div>

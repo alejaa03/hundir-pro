@@ -19,7 +19,7 @@ function backup(){
 
 var person = ''
 var boats = backup();
-
+var missileCount = 0;
 var userBoard = []
 var board = []
 var shipReg = [[]]
@@ -44,8 +44,9 @@ var clickFunction = function (e){
      checkCoors((tempID).split(","))
    },300)
   //alert(this.id)
-    document.getElementById(this.id).removeEventListener("mouseover", hoverFunction,false)
+  document.getElementById(this.id).removeEventListener("mouseover", hoverFunction,false)
   document.getElementById(this.id).removeEventListener("click", clickFunction,false)
+  ++missileCount;
 }
 
 var hoverFunction = function(){
@@ -65,23 +66,24 @@ function drawCanvas(){
   ctx.font = "30px Arial";
   ctx.clearRect(250, 0, 65, c.height);
   ctx.clearRect(0, 350, 65, 200);
+  ctx.strokeStyle="#00FF00";
   //Colchoneta
-  img.src = "resources/colchoneta.png";
+  img.src="resources/ColchonetaGreen.png";
   ctx.drawImage(img,30,10,75,75);
   ctx.strokeText("X", 150,60)
   //Velero
   ctx.strokeText(boats[3].qty,250,60)
-  img.src = "resources/Velero.png";
+  img.src = "resources/VeleroGreen.png";
   ctx.drawImage(img,10,70);
   ctx.strokeText("X", 150,140)
   ctx.strokeText(boats[2].qty,250,140)
   //Galeon
-  img.src = "resources/Galeon.jpg";
+  img.src = "resources/GaleonGreen.png";
   ctx.drawImage(img,20,180,75,75);
   ctx.strokeText("X", 150,230)
   ctx.strokeText(boats[1].qty,250,230)
   //Portaaviones
-  img.src = "resources/Portaaviones.png";
+  img.src = "resources/PortaavionesGreen.png";
   ctx.drawImage(img,10,260,100,38);
   ctx.strokeText("X", 150,285)
   ctx.strokeText(boats[0].qty,250,285)
@@ -94,7 +96,9 @@ function drawCanvas(){
   for (var i = 0; i < boats.length; i++) {
       totalQty += boats[i].qty
   }
-  ctx.fillText("THREATS LEFT", 0,350)
+
+  ctx.fillStyle="#00FF00";
+  ctx.fillText("THREATS LEFT", 10,350)
   ctx.strokeText(totalQty, 250, 350)
 
 }
@@ -103,10 +107,9 @@ function startGame() {
     drawCanvas();
     document.getElementById('tableWrapper').style.display = 'block';
     document.getElementById('controlsGame').style.display = 'block';
-    document.getElementById('frontTitle').style.display = 'none';
     coordsAttributeAssigner();
     for (var i = 0; i < document.getElementsByClassName("coord").length; i++) {
-        document.getElementsByClassName("coord")[i].addEventListener("mouseover", hoverFunction,false)      
+        document.getElementsByClassName("coord")[i].addEventListener("mouseover", hoverFunction,false)
         document.getElementsByClassName("coord")[i].addEventListener("click", clickFunction,false)
     }
 
@@ -134,9 +137,17 @@ function coordsAttributeAssigner (){
 
 
 function endGame() {
-    document.getElementById('rankingWrapper').style.display = 'block';
+    document.getElementById('endMsgContainer').style.display = 'block';
     document.getElementById('tableWrapper').style.display = 'none';
     document.getElementById('controlsGame').style.display = 'none';
+    document.getElementById('modulo2').style.display = 'none';
+    if (shipReg.length == 0) {
+        document.getElementById('endMsg').innerHTML = "YOU ELIMINATED ALL THREATS USING " + missileCount + " MISSILES!"
+    }
+    else {
+      document.getElementById('endMsg').innerHTML = "MISSION FAILED, WE'LL GET 'EM NEXT TIME "
+    }
+
 
 }
 
@@ -144,9 +155,10 @@ function playAgain(){
     person = '';
     shipReg = [[]]
     tempReg = []
+    missileCount = 0;
     boats = backup();
     document.getElementById('introGame').style.display = 'block';
-    document.getElementById('rankingWrapper').style.display = 'none';
+    document.getElementById('endMsgContainer').style.display = 'none';
     document.getElementById('inputName').value = "";
   //  console.log(document.getElementById('table').getElementsByTagName('td').length)
     for (var i = 0; i <  document.getElementById('table').getElementsByTagName('td').length; i++) {

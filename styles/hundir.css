@@ -1,4 +1,7 @@
-
+html {
+      background-color: black;
+      color:lime;
+}
 *{
   font-family: 'Roboto Mono', monospace;
 }
@@ -16,7 +19,7 @@
 }
 #wrapper{
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 45%;
   transform: translate(-50%, -50%);
 
@@ -25,10 +28,11 @@
   display: none;
   position: absolute;
   top: 0%;
-  left: 100%;
+  left: 110%;
 }
 #tableWrapper{
     display: none;
+    border: solid;
 
 }
 
@@ -41,7 +45,7 @@
     background-color: aqua
 }
 
-#rankingWrapper{
+#endMsgContainer{
     display: none;
 }
 
@@ -62,7 +66,7 @@ table tr td {
 }
 
 table tr td:first-child {
-    background-color: aquamarine;
+    background-color: black;
 }
 
 .flip {
@@ -74,7 +78,7 @@ table tr td:first-child {
 .hitShip{
   background-image: url(../resources/titanic.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
@@ -83,9 +87,8 @@ table tr td:first-child {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  background-position-y: 5px ;
+  background-position-y: -5px;
 }
-
 .coord{
       cursor: url(../resources/crosshair1.png) 16 16,pointer;
 }
