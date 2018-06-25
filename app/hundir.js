@@ -106,6 +106,7 @@ function startGame() {
     document.getElementById('frontTitle').style.display = 'none';
     coordsAttributeAssigner();
     for (var i = 0; i < document.getElementsByClassName("coord").length; i++) {
+        document.getElementsByClassName("coord")[i].addEventListener("mouseover", hoverFunction,false)      
         document.getElementsByClassName("coord")[i].addEventListener("click", clickFunction,false)
     }
 
