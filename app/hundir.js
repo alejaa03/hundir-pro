@@ -270,26 +270,26 @@ function decidePlace(id){
          for (var i = 1; i < shipReg.length; i++) {
            for (var j = 0; j < shipReg[i].length; j++) {
                  if(userCoords[0] == shipReg[i][j][0] && userCoords[1] == shipReg[i][j][1]){
-                   console.log("TOCADO! ")
+                  // console.log("TOCADO! ")
                    document.getElementById(userCoords.join(",")).classList.add("hitShip")
                    shipReg[i].splice(j,1);
                    //console.log("J: " + j + "I: " + i)
                    if(shipReg[i].length == 0){
                      if (i > 6) {
                        boats[3].qty--;
-                       console.log("Has hundido una " + boats[3].name + "! Te quedan " + boats[3].qty)
+                       //console.log("Has hundido una " + boats[3].name + "! Te quedan " + boats[3].qty)
                      }
                      else if (i < 7 && i > 3){
                        boats[2].qty--;
-                       console.log("Has hundido un " + boats[2].name + "! Te quedan " + boats[2].qty)
+                      // console.log("Has hundido un " + boats[2].name + "! Te quedan " + boats[2].qty)
                      }
                      else if (i < 4 && i > 1){
                        boats[1].qty--;
-                       console.log("Has hundido un " + boats[1].name + "! Te quedan " + boats[1].qty)
+                      // console.log("Has hundido un " + boats[1].name + "! Te quedan " + boats[1].qty)
                      }
                      else {
                        boats[0].qty--;
-                       console.log("Has hundido un " + boats[0].name + "! Te quedan " + boats[0].qty)
+                    //   console.log("Has hundido un " + boats[0].name + "! Te quedan " + boats[0].qty)
                      }
                      drawCanvas();
                    }
