@@ -7,14 +7,17 @@ html {
 }
 
 button{
-  background-color: black;
-  color: lime;
+      margin-left: 30px;
+      background-color: black;
+      color: lime;
+      font-size: 30px;
 }
 input{
-  background-color: black;
-  border: solid;
-  border-color: lime;
-  color: lime;
+    background-color: black;
+    border: solid;
+    border-color: lime;
+    color: lime;
+    font-size: 30px;
 }
 
 #listRules{
