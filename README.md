@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-$ git clone https://github.com/alejaa03/HUNDIRPRO
+$ git clone https://github.com/alejaa03/HUNDIRPRO.git
 
 $ cd HUNDIRPRO/
 
