@@ -1,4 +1,5 @@
 # Battleship game
+Classic [battleship](https://en.wikipedia.org/wiki/Battleship_(game)) game for 1 player vs the IA ship placement.
 ## Usage
 
 ```sh
